@@ -6,6 +6,7 @@ const baseURL = 'https://rickandmortyapi.com/api';
 const getCharacter = async (id) => { 
     const res = await fetch(`${baseURL}/character/${id}`);
     const data = await res.json(); // de la respuesta nos interesa el body que es el que tiene la info que vamos a necesitar
+    console.log(data);
     return data;
 }
 
@@ -14,6 +15,7 @@ const getCharacter = async (id) => {
 const getCharacters = async (page) => {
     const res = await fetch(`${baseURL}/character/?page=${page}`);
     const data = await res.json();
+    console.log(data);
     return data;
 }
 
